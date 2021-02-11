@@ -19,5 +19,9 @@ spec:
         env:
           - name: APACHE_RUN_DIR
             value: /tmp
+          - name: APACHE_LOCK_DIR
+            value: /tmp
+          - name: APACHE_PID_FILE
+            value: /tmp/apache2.pid
         ports:
         - containerPort: 8080
