@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: image-registry.openshift-image-registry.svc:5000/helloargo/ks-guestbook-demo-8080@sha256:af2e938f2f3a5b54b9ce4e14f1cd18732c9a1faca2201834fd5d0f8615867791
+      - image: image-registry.openshift-image-registry.svc:5000/helloargo/ks-guestbook-demo-8080@sha256:cef32545619a4bc7dd01ff56635099ef582c339f9fe4e51b3ee05c6bcf3bc9d0
         name: guestbook-ui
         ports:
         - containerPort: 8080
