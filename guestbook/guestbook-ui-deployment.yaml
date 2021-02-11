@@ -16,5 +16,8 @@ spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/helloargo/ks-guestbook-demo-8080@sha256:cef32545619a4bc7dd01ff56635099ef582c339f9fe4e51b3ee05c6bcf3bc9d0
         name: guestbook-ui
+        env:
+          - name: APACHE_RUN_DIR
+            value: /tmp
         ports:
         - containerPort: 8080
