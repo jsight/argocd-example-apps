@@ -1,0 +1,18 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: gb-rebuilder
+spec:
+  params:
+    - name: image
+      type: string
+      default: gcr.io/heptio-images/ks-guestbook-demo:0.2
+  tasks:
+    - name: gb-rebuilder-rebuild-image
+      taskRef:
+        name: gb-rebuilder-rebuild-image
+      params:
+        - name: image
+          value: $(params.image)
+        - name: outputImage
+          value: image-registry.openshift-image-registry.svc:5000/helloargo/ks-guestbook-demo-8080:latest
