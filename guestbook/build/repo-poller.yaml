@@ -1,0 +1,16 @@
+apiVersion: polling.tekton.dev/v1alpha1
+kind: Repository
+metadata:
+  name: gb-repository
+spec:
+  url: https://github.com/jsight/argocd-example-apps.git
+  ref: main
+  frequency: 5m
+  type: github # can also be gitlab
+  pipelineRef:
+    name: github-poll-pipeline
+    params:
+    - name: sha
+      expression: commit.sha
+    - name: repoURL
+      expression: repoURL
