@@ -8,7 +8,7 @@ spec:
   frequency: 5m
   type: github # can also be gitlab
   pipelineRef:
-    name: github-poll-pipeline
+    name: gb-rebuilder
     params:
     - name: sha
       expression: commit.sha
