@@ -15,4 +15,4 @@ spec:
         - name: image
           value: $(params.image)
         - name: outputImage
-          value: image-registry.openshift-image-registry.svc:5000/helloargo/ks-guestbook-demo-8080:latest
+          value: image-registry.openshift-image-registry.svc:5000/it-eai--build/ks-guestbook-demo-8080:latest
