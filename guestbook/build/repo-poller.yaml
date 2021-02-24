@@ -9,8 +9,8 @@ spec:
   type: github # can also be gitlab
   pipelineRef:
     name: gb-rebuilder
-    params:
-    - name: sha
-      expression: commit.sha
-    - name: repoURL
-      expression: repoURL
+    params: {}
+#    - name: sha
+#      expression: commit.sha
+#    - name: repoURL
+#      expression: repoURL
